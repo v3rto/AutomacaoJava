@@ -1,4 +1,4 @@
-package Cucumber.Passos;
+package Cucumber.Steps;
 
 import org.json.simple.JSONObject;
 import org.junit.AfterClass;
@@ -6,12 +6,12 @@ import org.openqa.selenium.WebDriver;
 
 import Constante.ChamadaMassa;
 import Constante.Utils;
-import Cucumber.Steps.Desafio1Steps;
+import Cucumber.PageObjects.Desafio1Steps;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.it.Quando;
 import cucumber.api.java.pt.Então;
 
-public class Desafio1Passos {
+public class RealizarCadastroeLogin {
 
 	ChamadaMassa massaDados = new ChamadaMassa();
 	

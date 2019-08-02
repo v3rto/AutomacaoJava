@@ -7,8 +7,8 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/java/Cucumber/RealizarCadastroeLogin.feature", tags = "@RealizarCadastroeLogin", 
-glue = {""}, monochrome = true, dryRun = false)//snippets = SnippetType.CAMELCASE)
+@CucumberOptions(features = "src/test/java/Cucumber/RealizarCadastroeLogin.feature", 
+glue = {"src/test/java/Cucumber.Passos/"}, monochrome = true, dryRun = false)
 
 public class Runner {
 

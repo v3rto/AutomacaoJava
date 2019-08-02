@@ -1,4 +1,4 @@
-package Cucumber.Steps;
+package Cucumber.PageObjects;
 
 import java.util.concurrent.TimeUnit;
 
