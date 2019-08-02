@@ -7,9 +7,9 @@ import org.openqa.selenium.WebDriver;
 import Constante.ChamadaMassa;
 import Constante.Utils;
 import Cucumber.Steps.Desafio1Steps;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import cucumber.api.java.es.Dado;
+import cucumber.api.java.it.Quando;
+import cucumber.api.java.pt.Então;
 
 public class Desafio1Passos {
 
@@ -20,17 +20,17 @@ public class Desafio1Passos {
 	Desafio1Steps cadastro = new Desafio1Steps(driver);
 	
 	
-	@Given("^que estou navegando no site$")
+	@Dado("^que estou navegando no site$")
 	public void acessarSite(){
 		cadastro.SetUp();
 	}
 
-	@When("^clico em Login$")
+	@Quando("^clico em Login$")
 	public void clicarLogin(){
 		cadastro.clicarLogin();
 	}
 
-	@When("^informo meu email$") 
+	@Quando("^informo meu email$") 
 	public void informarEmail(){
 		try {
 			JSONObject obj = massaDados.dadosJson();
@@ -40,17 +40,17 @@ public class Desafio1Passos {
 			}
 	}
 
-	@When("^clico em Create Account$")
+	@Quando("^clico em Create Account$")
 	public void createAccount(){
 		cadastro.clicarCreateanAccount();
 	}
 
-	@Then("^o site deve ser direcionado até a tela de cadastro$")
+	@Então("^o site deve ser direcionado até a tela de cadastro$")
 	public void telaCadastro(){
 		cadastro.telaDeCadastro();
 	}
 
-	@Given("^que preencho os dados obrigatórios$") 
+	@Dado("^que preencho os dados obrigatórios$") 
 	public void tittleSelect(){
 		cadastro.clicarTittleMr();
 		try {
@@ -68,27 +68,27 @@ public class Desafio1Passos {
 		}catch(Exception e){
 		}
 	}
-	@When("^clico em Register$")
+	@Quando("^clico em Register$")
 	public void registerButton(){
 		cadastro.clicarRegister();
 	}
 
-	@Then("^sou direcionado para My Account$")
+	@Então("^sou direcionado para My Account$")
 	 public void myAccount(){
 		cadastro.myAccount();
 	}
 
-	@Given("^que clico em Sign out para sair da conta$")
+	@Dado("^que clico em Sign out para sair da conta$")
 	public void signOut(){
 	    cadastro.clicarSignOut();
 	}
 
-	@Given("^sou direcionado para tela de login$")
+	@Dado("^sou direcionado para tela de login$")
 	public void login(){
 		cadastro.telaDeLogin();
 	}
 
-	@When("^informo email e senha$")
+	@Quando("^informo email e senha$")
 	public void email(){
 		try {
 		JSONObject obj = massaDados.dadosJson();
@@ -98,7 +98,7 @@ public class Desafio1Passos {
 		}
 	}
 
-	@When("^clico em Sign in$")
+	@Quando("^clico em Sign in$")
 	public void signIn() throws InterruptedException{
 		cadastro.clicarSignIn();
 		Utils.WaitElement();

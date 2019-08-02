@@ -13,7 +13,7 @@ public class ChamadaMassa {
 	public JSONObject dadosJson() throws FileNotFoundException, IOException, ParseException {
 		JSONObject obj;
 		JSONParser parse = new JSONParser();
-		obj = (JSONObject) parse.parse(new FileReader("src\\main\\java\\MassaDados\\DesafioGroove.json"));
+		obj = (JSONObject) parse.parse(new FileReader("src\\main\\java\\MassaDados\\CadastroDados.json"));
 		
 		return obj;
 	}
